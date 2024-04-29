@@ -1,4 +1,4 @@
-# Asks user for name of fruit and add to list
+# Asks user for name of fruit and add to list then prints it
 
 my_list = ["apple", "orange", "pineapple", "pear"]  
 fruit = input("Please enter a fruit name")
