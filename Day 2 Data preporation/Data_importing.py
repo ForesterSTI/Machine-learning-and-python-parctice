@@ -28,8 +28,8 @@ for x in yes_val['Property_Area']:
 total= urban_count+rural_count+semi_rural_count
 print(f"Loan_Approval: YES \n\
         Urban total: {urban_count} \n\
-        rural_count: {rural_count} \n\
-        semi_rural_count: {semi_rural_count}\n\
+        Rural_count: {rural_count} \n\
+        Semiurban_count: {semi_rural_count}\n\
         Total: {total}")
 
 
@@ -47,6 +47,6 @@ for x in No_val['Property_Area']:
 total_N= urban_count_N+rural_count_N+semi_rural_count_N
 print(f"Loan_Approval: NO\n\
         Urban total: {urban_count_N} \n\
-        rural_count: {rural_count_N} \n\
-        semi_rural_count: {semi_rural_count_N}\n\
+        Rural_count: {rural_count_N} \n\
+        Semiurban_count: {semi_rural_count_N}\n\
         Total: {total_N}")
