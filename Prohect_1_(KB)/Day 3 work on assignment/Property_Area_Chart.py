@@ -2,37 +2,13 @@
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plot
-import plotly.express as px
 
 #importing data 
 raw_data = pd.read_csv("Day 3 work on assignment/Data/raw_data.csv")
 #print(raw_data)
 meta_data = pd.read_csv("Day 3 work on assignment/Data/metadata.csv")
 #print(meta_data.head)
-#aggrigating Property_area feature
-propA_df = pd.DataFrame(
-        raw_data[['Property_Area', 'Loan_Status']]
-        .groupby('Loan_Status')
-        .value_counts()
-        .reset_index()
-    )
 
-#Ploting graph  : this will ahow the diffeneces in approvals based on property area 
-
-fig = px.bar(
-    data_frame=propA_df,
-    x = 'Property_Area',
-    y = 'count',
-    facet_col=  'Loan_Status',
-    color = propA_df['Loan_Status'].astype(str),
-)
-
-#Nmae figure X and Y axis
-fig.update_layout(xaxis_title='Property Area', yaxis_title='Number of entries')
-fig.show()
-
-# Pie charts will represent amout of people's approval rated depending on their property area 
-#and percetage of approvals will be shown inthe legend 
 Urban_Area_only = raw_data['Property_Area'] == "Urban"
 Rural_Area_only = raw_data['Property_Area'] == "Rural"
 Semiurban_Area_only = raw_data['Property_Area'] == "Semiurban"
