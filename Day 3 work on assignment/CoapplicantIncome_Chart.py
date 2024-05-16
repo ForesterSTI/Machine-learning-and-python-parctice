@@ -124,13 +124,13 @@ raw['Log_CoapplicantIncome'] = np.log(raw['CoapplicantIncome']) #created a new c
 
 # Plot the transformed data
 fig = px.histogram(data_frame=raw, x='Log_CoapplicantIncome', color='Loan_Status',
-                   title='Histogram for Feature: LOG(LoanAmount) against the Target: Loan_Status',
+                   title='Histogram for Feature: LOG(CoapplicantIncome) against the Target: Loan_Status',
                    facet_col='Loan_Status')
 fig.update_layout(xaxis_title='Log(CoapplicantIncome) Feature', showlegend=False)
 fig.show()
 
 #Analysis
-#To avoid scaling back using exp() well work with LoanAmount over log_LoanAmount
+#To avoid scaling back using exp() well work with CoapplicantIncome over CoapplicantIncome
 #Seperate column between yes and no
 yes_df = raw[raw['Loan_Status'] == 'Y'][['CoapplicantIncome']]
 no_df = raw[raw['CoapplicantIncome'] == 'N'][['CoapplicantIncome']]

@@ -5,9 +5,9 @@ import matplotlib.pyplot as plot
 import plotly.express as px
 
 #importing data 
-raw_data = pd.read_csv("Day 3 work on assignment/Data/raw_data.csv")
+raw_data = pd.read_csv("Notebook KB_1\Data/raw_data.csv")
 #print(raw_data)
-meta_data = pd.read_csv("Day 3 work on assignment/Data/metadata.csv")
+#meta_data = pd.read_csv("Day 3 work on assignment/Data/metadata.csv")
 #print(meta_data.head)
 #aggrigating Property_area feature
 propA_df = pd.DataFrame(
